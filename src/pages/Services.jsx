@@ -8,7 +8,7 @@ import roofingImg from "../assets/builders working on roof.jpeg";
 import ceilingImg from "../assets/cieling under construction.jpeg";
 import skimmingImg from "../assets/indoor walls painting.png";
 import tilingImg from "../assets/finished wall tilling.jpeg";
-import paintingImg from "../assets/indoor walls painting.png";
+import paintingImg from "../assets/roof painting.jpeg";
 import kitchenImg from "../assets/finished fitted kitchen cabinets .jpeg";
 import tvStandsImg from "../assets/builder working on kitchen cabinets.jpeg";
 import commercialImg from "../assets/builder working on kitchen counter.jpeg";

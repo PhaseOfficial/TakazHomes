@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaFacebook, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import logo from "../../assets/Takaz Homes Logo Design.png";
 
 const Header = () => {
@@ -11,7 +12,14 @@ const Header = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
-    { name: "Contact Us", path: "/contact" },
+    { name: "Contact", path: "/contact" },
+  ];
+
+  const socialLinks = [
+    { name: "Facebook", href: "https://www.facebook.com/talent.karawe", icon: <FaFacebook /> },
+    { name: "TikTok", href: "https://tiktok.com/@talentkarawe431", icon: <FaTiktok /> },
+    { name: "WhatsApp Channel", href: "https://whatsapp.com/channel/0029VaFL8qjLSmbZz8LC4J1n", icon: <FaWhatsapp /> },
+    { name: "WhatsApp Group", href: "https://chat.whatsapp.com/BxHHHYUjiuwHNE2Sn70Tqn?mode=gi_t", icon: <FaWhatsapp /> },
   ];
 
   return (
@@ -125,6 +133,25 @@ const Header = () => {
                   </NavLink>
                 ))}
               </nav>
+
+              {/* Social Media Section in Sidebar */}
+              <div className="py-8 flex flex-col gap-4">
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Follow Us</p>
+                <div className="flex gap-4">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-orange-600 hover:text-white transition-all"
+                      title={social.name}
+                    >
+                      <span className="text-xl">{social.icon}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
 
               {/* Sidebar CTA */}
               <div className="mt-auto pt-8 border-t border-gray-200">

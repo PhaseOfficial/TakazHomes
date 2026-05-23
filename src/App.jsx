@@ -2,9 +2,6 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
-import ProductDetail from "./pages/ProductDetail";
-import Profile from "./pages/Profile";
-import Voice from "./pages/Voice";
 import { useEffect } from "react";
 
 const App = () => {
@@ -17,11 +14,8 @@ const App = () => {
   return (
     <Routes location={location} key={location.pathname}>
       <Route path="/" element={<Home />} />
-      <Route path="/contact" element={<Contact />} />
       <Route path="/services" element={<Services />} />
-      <Route path="/product/:id" element={<ProductDetail />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/voice" element={<Voice />} />
+      <Route path="/contact" element={<Contact />} />
       
       <Route
         path="*"

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { FaFacebook, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import contactHero from "../assets/builders working on roof.jpeg";
 import mapPlaceholder from "../assets/finished stairs.jpeg";
 import Layout from "../components/common/Layout";
@@ -50,7 +51,7 @@ const Contact = () => {
       title: "Contact",
       details: "+263 71 581 8857",
       subDetails:
-        "+263 78 773 4588 | +263 77 106 5327 | +263 78 723 9117",
+        "+263 78 773 4588 | +263 77 106 5327",
       whatsapp: true,
     },
     {
@@ -294,10 +295,10 @@ const Contact = () => {
 
             <div className="flex flex-wrap justify-center gap-5">
               {[
-                { name: "FACEBOOK", link: "https://www.facebook.com/talent.karawe", icon: "public" },
-                { name: "TIKTOK", link: "https://tiktok.com/@talentkarawe431", icon: "movie" },
-                { name: "WHATSAPP CHANNEL", link: "https://whatsapp.com/channel/0029VaFL8qjLSmbZz8LC4J1n", icon: "chat" },
-                { name: "WHATSAPP GROUP", link: "https://chat.whatsapp.com/BxHHHYUjiuwHNE2Sn70Tqn?mode=gi_t", icon: "groups" }
+                { name: "FACEBOOK", link: "https://www.facebook.com/talent.karawe", icon: <FaFacebook className="text-2xl" /> },
+                { name: "TIKTOK", link: "https://tiktok.com/@talentkarawe431", icon: <FaTiktok className="text-2xl" /> },
+                { name: "WHATSAPP CHANNEL", link: "https://whatsapp.com/channel/0029VaFL8qjLSmbZz8LC4J1n", icon: <FaWhatsapp className="text-2xl" /> },
+                { name: "WHATSAPP GROUP", link: "https://chat.whatsapp.com/BxHHHYUjiuwHNE2Sn70Tqn?mode=gi_t", icon: <FaWhatsapp className="text-2xl" /> }
               ].map(
                 (platform, i) => (
                   <motion.a
@@ -309,7 +310,7 @@ const Contact = () => {
                     rel="noreferrer"
                     className="px-8 py-4 rounded-full border border-gray-300 hover:border-orange-600 hover:bg-orange-50 transition-all flex items-center gap-3"
                   >
-                    <span className="material-symbols-outlined text-orange-600">
+                    <span className="text-orange-600">
                       {platform.icon}
                     </span>
 

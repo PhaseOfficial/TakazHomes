@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaFacebook, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import logo from "../../assets/Takaz Homes Logo Design.png";
 
 const Footer = () => {
@@ -29,10 +30,18 @@ const Footer = () => {
             </div>
             <div className="flex flex-col gap-2">
               <span className="font-label-lg text-label-lg text-white uppercase tracking-widest mb-2">Connect</span>
-              <a className="font-label-sm text-label-sm text-on-tertiary-container/70 hover:text-secondary-fixed transition-colors" href="https://www.facebook.com/talent.karawe" target="_blank" rel="noreferrer">Facebook</a>
-              <a className="font-label-sm text-label-sm text-on-tertiary-container/70 hover:text-secondary-fixed transition-colors" href="https://tiktok.com/@talentkarawe431" target="_blank" rel="noreferrer">TikTok</a>
-              <a className="font-label-sm text-label-sm text-on-tertiary-container/70 hover:text-secondary-fixed transition-colors" href="https://whatsapp.com/channel/0029VaFL8qjLSmbZz8LC4J1n" target="_blank" rel="noreferrer">WhatsApp Channel</a>
-              <a className="font-label-sm text-label-sm text-on-tertiary-container/70 hover:text-secondary-fixed transition-colors" href="https://chat.whatsapp.com/BxHHHYUjiuwHNE2Sn70Tqn?mode=gi_t" target="_blank" rel="noreferrer">WhatsApp Group</a>
+              <a className="font-label-sm text-label-sm text-on-tertiary-container/70 hover:text-secondary-fixed transition-colors flex items-center gap-2" href="https://www.facebook.com/talent.karawe" target="_blank" rel="noreferrer">
+                <FaFacebook /> Facebook
+              </a>
+              <a className="font-label-sm text-label-sm text-on-tertiary-container/70 hover:text-secondary-fixed transition-colors flex items-center gap-2" href="https://tiktok.com/@talentkarawe431" target="_blank" rel="noreferrer">
+                <FaTiktok /> TikTok
+              </a>
+              <a className="font-label-sm text-label-sm text-on-tertiary-container/70 hover:text-secondary-fixed transition-colors flex items-center gap-2" href="https://whatsapp.com/channel/0029VaFL8qjLSmbZz8LC4J1n" target="_blank" rel="noreferrer">
+                <FaWhatsapp /> WhatsApp Channel
+              </a>
+              <a className="font-label-sm text-label-sm text-on-tertiary-container/70 hover:text-secondary-fixed transition-colors flex items-center gap-2" href="https://chat.whatsapp.com/BxHHHYUjiuwHNE2Sn70Tqn?mode=gi_t" target="_blank" rel="noreferrer">
+                <FaWhatsapp /> WhatsApp Group
+              </a>
             </div>
           </div>
         </div>

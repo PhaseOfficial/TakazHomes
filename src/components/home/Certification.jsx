@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import expertiseImg from "../../assets/builder working on cieling.jpeg";
+import cipzLogo from "../../assets/CIPZ Logo.png";
 
 const Certification = () => {
   const fadeInUp = {
@@ -27,7 +28,10 @@ const Certification = () => {
           </div>
         </motion.div>
         <motion.div {...fadeInUp}>
-          <h2 className="font-headline-lg text-headline-lg mb-stack-md text-primary uppercase tracking-tight">Quality Workmanship You Can Trust</h2>
+          <div className="flex items-center gap-4 mb-stack-md">
+            <img src={cipzLogo} alt="CIPZ Logo" className="h-16 w-auto" />
+            <h2 className="font-headline-lg text-headline-lg text-primary uppercase tracking-tight m-0">Quality Workmanship You Can Trust</h2>
+          </div>
           <p className="font-body-md text-body-md text-on-surface-variant mb-stack-lg leading-relaxed">
             Takaz Homes Construction specializes in high-quality construction finishing services designed to transform houses into beautiful modern spaces. We blend raw industrial strength with sophisticated elegance, ensuring every brick and tile reflects our commitment to perfection.
           </p>
