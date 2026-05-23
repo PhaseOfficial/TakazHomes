@@ -282,7 +282,7 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* SOCIALS */}
+        {/* Social Media Hub */}
         <section className="py-24 px-4 md:px-10">
           <div className="max-w-5xl mx-auto text-center">
             <motion.h2
@@ -293,26 +293,27 @@ const Contact = () => {
             </motion.h2>
 
             <div className="flex flex-wrap justify-center gap-5">
-              {["FACEBOOK", "INSTAGRAM", "TIKTOK", "WHATSAPP"].map(
+              {[
+                { name: "FACEBOOK", link: "https://www.facebook.com/talent.karawe", icon: "public" },
+                { name: "TIKTOK", link: "https://tiktok.com/@talentkarawe431", icon: "movie" },
+                { name: "WHATSAPP CHANNEL", link: "https://whatsapp.com/channel/0029VaFL8qjLSmbZz8LC4J1n", icon: "chat" },
+                { name: "WHATSAPP GROUP", link: "https://chat.whatsapp.com/BxHHHYUjiuwHNE2Sn70Tqn?mode=gi_t", icon: "groups" }
+              ].map(
                 (platform, i) => (
                   <motion.a
-                    key={platform}
+                    key={platform.name}
                     {...fadeInUp}
                     transition={{ delay: i * 0.1 }}
-                    href="#"
+                    href={platform.link}
+                    target="_blank"
+                    rel="noreferrer"
                     className="px-8 py-4 rounded-full border border-gray-300 hover:border-orange-600 hover:bg-orange-50 transition-all flex items-center gap-3"
                   >
                     <span className="material-symbols-outlined text-orange-600">
-                      {platform === "FACEBOOK"
-                        ? "public"
-                        : platform === "INSTAGRAM"
-                        ? "photo_camera"
-                        : platform === "TIKTOK"
-                        ? "movie"
-                        : "chat"}
+                      {platform.icon}
                     </span>
 
-                    <span className="font-semibold">{platform}</span>
+                    <span className="font-semibold">{platform.name}</span>
                   </motion.a>
                 )
               )}

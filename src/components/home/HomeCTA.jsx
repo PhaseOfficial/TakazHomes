@@ -1,8 +1,17 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 import ctaBg from "../../assets/builders working on roof.jpeg";
 
 const HomeCTA = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
@@ -11,10 +20,11 @@ const HomeCTA = () => {
   };
 
   return (
-    <section className="relative py-stack-lg overflow-hidden">
+    <section ref={ref} className="relative py-stack-lg overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img 
-          className="w-full h-full object-cover grayscale" 
+        <motion.img 
+          style={{ y }}
+          className="w-full h-full object-cover grayscale scale-110" 
           src={ctaBg} 
           alt="Construction Site"
         />

@@ -1,13 +1,24 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
+import heroImg from "../../assets/builders working on roof.jpeg";
 
 const Hero = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"]
+  });
+  
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+
   return (
-    <section className="relative h-[80vh] min-h-[600px] flex items-center overflow-hidden">
+    <section ref={ref} className="relative h-[80vh] min-h-[600px] flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img 
+        <motion.img 
+          style={{ y }}
           className="w-full h-full object-cover" 
-          src="/assets/design/hero.jpg" 
+          src={heroImg} 
           alt="Luxury Home"
         />
         <div className="absolute inset-0 bg-primary/40" style={{
