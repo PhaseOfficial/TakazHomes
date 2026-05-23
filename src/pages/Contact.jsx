@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaFacebook, FaTiktok, FaWhatsapp } from "react-icons/fa";
-import contactHero from "../assets/builders working on roof.jpeg";
+import contactHero from "../assets/finished kitchen with counters.jpeg";
 import mapPlaceholder from "../assets/finished stairs.jpeg";
 import Layout from "../components/common/Layout";
 

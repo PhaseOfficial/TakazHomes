@@ -6,9 +6,10 @@ import poolJacoozi from "../../assets/finished small pool or jacoozi.jpeg";
 import finishedTilling from "../../assets/finished tilling.jpeg";
 import finishedToilet from "../../assets/finished toilet.jpeg";
 import finishedKitchenCounters from "../../assets/finnished kitchen counters.jpeg";
-import finishedStairs from "../../assets/finnished stairs.jpeg";
+import finishedStairs from "../../assets/finished stairs.jpeg";
 import roofPainting from "../../assets/roof painting.jpeg";
 import selfieCieling from "../../assets/builders selfy working on cieling.jpeg";
+import roofingImg from "../../assets/builders working on roof.jpeg";
 
 const Gallery = () => {
   const fadeInUp = {
@@ -26,7 +27,8 @@ const Gallery = () => {
     { src: finishedKitchenCounters, title: "Sleek Countertops" },
     { src: finishedStairs, title: "Architectural Stairs" },
     { src: roofPainting, title: "Roof Restoration" },
-    { src: selfieCieling, title: "Expert Workmanship" }
+    { src: selfieCieling, title: "Expert Workmanship" },
+    { src: roofingImg, title: "Roofing Installation" }
   ];
 
   return (
@@ -35,7 +37,7 @@ const Gallery = () => {
         <h2 className="font-headline-lg text-headline-lg text-primary uppercase tracking-tight">Our Recent Projects</h2>
         <p className="font-body-md text-on-surface-variant mt-stack-sm">Witness the Takaz standard of excellence in every detail.</p>
       </div>
-      <div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
         {images.map((image, index) => (
           <motion.div
             key={index}

@@ -5,6 +5,7 @@ import Layout from "../components/common/Layout";
 
 // Import local images
 import roofingImg from "../assets/builders working on roof.jpeg";
+import servicesHero from "../assets/builder working on cieling.jpeg";
 import ceilingImg from "../assets/cieling under construction.jpeg";
 import skimmingImg from "../assets/indoor walls painting.png";
 import tilingImg from "../assets/finished wall tilling.jpeg";
@@ -12,6 +13,7 @@ import paintingImg from "../assets/roof painting.jpeg";
 import kitchenImg from "../assets/finished fitted kitchen cabinets .jpeg";
 import tvStandsImg from "../assets/builder working on kitchen cabinets.jpeg";
 import commercialImg from "../assets/builder working on kitchen counter.jpeg";
+import processBg from "../assets/finnished stairs.jpeg";
 
 const Services = () => {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -47,7 +49,7 @@ const Services = () => {
     {
       id: "03",
       category: "Finishing",
-      title: "Wall Skimming & Plastering",
+      title: "Wall Skimming",
       description: "Say goodbye to rough walls. Our skimming service provides a glass-smooth base for paint, ensuring a high-end luxury finish that reflects light perfectly throughout your home.",
       items: ["Ultra-Smooth Polish Finish", "Crack Repair & Reinforcement", "Decorative Wall Texturing"],
       image: skimmingImg
@@ -118,7 +120,7 @@ const Services = () => {
             <img 
               alt="Construction Hero" 
               className="w-full h-full object-cover grayscale-[20%]" 
-              src={roofingImg} 
+              src={servicesHero} 
             />
             <div className="absolute inset-0 bg-primary/40 backdrop-brightness-75"></div>
           </div>
@@ -186,28 +188,40 @@ const Services = () => {
         </section>
 
         {/* Process Timeline */}
-        <section className="bg-primary py-stack-lg text-white">
-          <div className="container mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16">
-            <motion.h2 {...fadeInUp} className="font-headline-lg text-headline-lg mb-4">Our 5-Step Process</motion.h2>
-            <motion.p {...fadeInUp} className="text-white/70 max-w-xl mx-auto">From the first handshake to the final polish, we ensure transparency and precision at every stage of the journey.</motion.p>
+        <section className="relative py-stack-lg overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src={processBg} 
+              alt="Process Background" 
+              className="w-full h-full object-cover grayscale-[40%]"
+            />
+            <div className="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
           </div>
-          <div className="max-w-4xl mx-auto px-margin-mobile relative">
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-secondary-fixed/30 -translate-x-1/2 hidden md:block"></div>
-            <div className="space-y-16">
-              {processSteps.map((step, index) => (
-                <motion.div 
-                  key={step.num}
-                  {...fadeInUp}
-                  className={`relative flex flex-col md:flex-row items-center group ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
-                >
-                  <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}>
-                    <h3 className="font-headline-md text-headline-md mb-2">{step.num}. {step.title}</h3>
-                    <p className="text-white/60">{step.desc}</p>
-                  </div>
-                  <div className="absolute left-0 md:left-1/2 w-10 h-10 bg-secondary text-primary font-bold rounded-full flex items-center justify-center -translate-x-1/2 z-10 border-4 border-primary">{step.num}</div>
-                  <div className="md:w-1/2"></div>
-                </motion.div>
-              ))}
+
+          <div className="relative z-10 text-white">
+            <div className="container mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16">
+              <motion.h2 {...fadeInUp} className="font-headline-lg text-headline-lg mb-4 uppercase tracking-tight font-bold">Our 5-Step Process</motion.h2>
+              <motion.p {...fadeInUp} className="text-white/70 max-w-xl mx-auto">From the first handshake to the final polish, we ensure transparency and precision at every stage of the journey.</motion.p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto px-margin-mobile relative">
+              <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-secondary-fixed/30 -translate-x-1/2 hidden md:block"></div>
+              <div className="space-y-16">
+                {processSteps.map((step, index) => (
+                  <motion.div 
+                    key={step.num}
+                    {...fadeInUp}
+                    className={`relative flex flex-col md:flex-row items-center group ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
+                  >
+                    <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}>
+                      <h3 className="font-headline-md text-headline-md mb-2">{step.num}. {step.title}</h3>
+                      <p className="text-white/60">{step.desc}</p>
+                    </div>
+                    <div className="absolute left-0 md:left-1/2 w-10 h-10 bg-secondary text-primary font-bold rounded-full flex items-center justify-center -translate-x-1/2 z-10 border-4 border-primary shadow-xl">{step.num}</div>
+                    <div className="md:w-1/2"></div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
