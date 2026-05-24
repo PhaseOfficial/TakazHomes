@@ -29,7 +29,7 @@ const Certification = () => {
         </motion.div>
         <motion.div {...fadeInUp}>
           <div className="flex items-center gap-4 mb-stack-md">
-            <img src={cipzLogo} alt="CIPZ Logo" className="h-16 w-auto" />
+            {/* <img src={cipzLogo} alt="CIPZ Logo" className="h-16 w-auto" /> */}
             <h2 className="font-headline-lg text-headline-lg text-primary uppercase tracking-tight m-0">Quality Workmanship You Can Trust</h2>
           </div>
           <p className="font-body-md text-body-md text-on-surface-variant mb-stack-lg leading-relaxed">
