@@ -53,10 +53,21 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="max-w-container-max-width mx-auto border-t border-white/10 mt-stack-lg pt-stack-md flex flex-col md:flex-row justify-between items-center gap-gutter">
-          <span className="font-label-sm text-label-sm opacity-50 uppercase tracking-widest text-white/60">
-            © 2026 TAKAZ HOMES CONSTRUCTION. ALL RIGHTS RESERVED.
-          </span>
+        <div className="max-w-container-max-width mx-auto border-t border-white/10 mt-stack-lg pt-stack-md flex flex-col md:flex-row justify-between items-center gap-gutter text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <span className="font-label-sm text-label-sm opacity-50 uppercase tracking-widest text-white/60">
+              © 2026 TAKAZ HOMES CONSTRUCTION. ALL RIGHTS RESERVED.
+            </span>
+            <span className="hidden md:block opacity-30 text-white">|</span>
+            <a 
+              href="https://www.redcupseries.co.zw" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-label-sm text-label-sm opacity-50 hover:opacity-100 uppercase tracking-widest text-white/60 transition-opacity"
+            >
+              MADE BY RED CUP SERIES
+            </a>
+          </div>
           <div className="flex gap-4">
             <button 
               onClick={scrollToTop}
