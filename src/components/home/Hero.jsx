@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import heroImg from "../../assets/builders working on roof.jpeg";
+import PaintStroke from "../common/PaintStroke";
 
 const Hero = () => {
   const ref = useRef(null);
@@ -34,7 +35,7 @@ const Hero = () => {
           className="max-w-2xl"
         >
           <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-sm leading-tight">
-            Building Quality Homes With <span className="text-secondary-fixed">Precision</span> & Excellence
+            Building Quality Homes With <PaintStroke color="var(--secondary)" className="text-secondary-fixed">Precision</PaintStroke> & Excellence
           </h1>
           <p className="font-body-lg text-body-lg text-surface-variant mb-stack-lg">
             Professional construction and finishing services for modern homes and commercial spaces. Commissioning legacies through architectural integrity.

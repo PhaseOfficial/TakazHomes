@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import PaintStroke from "../common/PaintStroke";
 
 const Services = () => {
   const fadeInUp = {
@@ -58,8 +59,9 @@ const Services = () => {
       backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)'
     }}>
       <div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center mb-stack-lg">
-        <h2 className="font-headline-lg text-headline-lg text-primary uppercase tracking-tight">Our Expertise</h2>
-        <div className="h-1 w-24 bg-secondary mx-auto mt-stack-sm"></div>
+        <h2 className="font-headline-lg text-headline-lg text-primary uppercase tracking-tight">
+          Our <PaintStroke color="var(--secondary)">Expertise</PaintStroke>
+        </h2>
       </div>
       <div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
         {services.map((service, index) => (

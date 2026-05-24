@@ -6,6 +6,9 @@
   color-scheme: light;
   color: #1b1c1c;
   background-color: #fbf9f8;
+  --primary: #000000;
+  --secondary: #A4000B;
+  --secondary-fixed: #ffe088;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import PaintStroke from "../common/PaintStroke";
 
 const BrandStory = () => {
   const fadeInUp = {
@@ -13,8 +14,11 @@ const BrandStory = () => {
       <div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="grid md:grid-cols-2 gap-stack-lg">
           <motion.div {...fadeInUp}>
-            <h2 className="font-headline-lg text-headline-lg mb-stack-md uppercase tracking-tight">The Takaz Standard</h2>
-            <p className="text-surface-variant mb-stack-lg opacity-80">We don't just build structures; we craft environments that stand the test of time through rigorous standards and modern innovation.</p>
+            <h2 className="font-headline-lg text-headline-lg mb-stack-md uppercase tracking-tight">
+              The <PaintStroke color="var(--secondary)">Takaz</PaintStroke> Standard
+            </h2>
+            <p className="text-surface-variant mb-stack-lg opacity-80">
+We don't just build structures; we craft environments that stand the test of time through rigorous standards and modern innovation.</p>
             <div className="space-y-stack-md">
               <div className="flex gap-stack-sm items-start">
                 <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center shrink-0">

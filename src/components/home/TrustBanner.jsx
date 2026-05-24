@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import PaintStroke from "../common/PaintStroke";
 import before1 from "../../assets/cieling under construction.jpeg";
 import after1 from "../../assets/SUSPENDED cieling painting job.png";
 import before2 from "../../assets/builder working on kitchen cabinets.jpeg";
@@ -17,7 +18,9 @@ const TrustBanner = () => {
       <div className="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="flex justify-between items-end mb-stack-lg">
           <motion.div {...fadeInUp}>
-            <h2 className="font-headline-lg text-headline-lg text-primary uppercase tracking-tight">Signature Transformations</h2>
+            <h2 className="font-headline-lg text-headline-lg text-primary uppercase tracking-tight">
+              Signature <PaintStroke color="var(--secondary)">Transformations</PaintStroke>
+            </h2>
             <p className="text-on-surface-variant">Hover to see the Takaz Finishing touch.</p>
           </motion.div>
           {/* <button className="font-label-lg text-label-lg border-b-2 border-primary pb-1 hover:text-secondary hover:border-secondary transition-all">VIEW GALLERY</button> */}
