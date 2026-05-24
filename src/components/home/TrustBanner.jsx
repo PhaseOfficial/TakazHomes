@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import PaintStroke from "../common/PaintStroke";
+import { FaDownload } from "react-icons/fa";
 import before1 from "../../assets/cieling under construction.jpeg";
 import after1 from "../../assets/SUSPENDED cieling painting job.png";
 import before2 from "../../assets/builder working on kitchen cabinets.jpeg";
 import after2 from "../../assets/finished fitted kitchen cabinets .jpeg";
+import companyProfile from "../../assets/Takaz Investments Company Profile 1.pdf";
 
 const TrustBanner = () => {
   const fadeInUp = {
@@ -23,7 +25,13 @@ const TrustBanner = () => {
             </h2>
             <p className="text-on-surface-variant">Hover to see the Takaz Finishing touch.</p>
           </motion.div>
-          {/* <button className="font-label-lg text-label-lg border-b-2 border-primary pb-1 hover:text-secondary hover:border-secondary transition-all">VIEW GALLERY</button> */}
+          <a
+            href={companyProfile}
+            download
+            className="flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 rounded-lg font-label-lg hover:brightness-95 transition-all shadow-md"
+          >
+            <FaDownload /> Company Profile
+          </a>
         </div>
         <div className="grid md:grid-cols-2 gap-stack-lg">
           {/* Transformation 1 */}

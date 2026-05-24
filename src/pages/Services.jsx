@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaDownload } from "react-icons/fa";
 import Layout from "../components/common/Layout";
 
 // Import local images
@@ -14,6 +15,7 @@ import kitchenImg from "../assets/finished fitted kitchen cabinets .jpeg";
 import tvStandsImg from "../assets/builder working on kitchen cabinets.jpeg";
 import commercialImg from "../assets/builder working on kitchen counter.jpeg";
 import processBg from "../assets/finnished stairs.jpeg";
+import companyProfile from "../assets/Takaz Investments Company Profile 1.pdf";
 
 const Services = () => {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -272,18 +274,25 @@ const Services = () => {
             <motion.h2 {...fadeInUp} className="font-headline-lg text-headline-lg mb-6">Ready to start your dream project?</motion.h2>
             <motion.p {...fadeInUp} className="text-white/70 mb-10 max-w-2xl mx-auto">Our team of expert craftsmen and architectural specialists are ready to turn your vision into reality. Request a free consultation today.</motion.p>
             <div className="flex flex-col md:flex-row justify-center gap-4">
-              <Link 
+              <Link
                 to="/contact"
                 className="bg-secondary-fixed text-on-secondary-fixed px-10 py-4 rounded-lg font-label-lg font-bold hover:scale-105 transition-transform active:scale-95 text-center"
               >
                 REQUEST A QUOTE
               </Link>
-              <Link 
+              <Link
                 to="/contact"
                 className="border border-white/30 text-white px-10 py-4 rounded-lg font-label-lg hover:bg-white/10 transition-colors text-center"
               >
                 GET IN TOUCH
               </Link>
+              <a
+                href={companyProfile}
+                download
+                className="bg-white/20 border border-white/30 text-white px-10 py-4 rounded-lg font-label-lg hover:bg-white/30 transition-colors text-center flex items-center justify-center gap-2"
+              >
+                <FaDownload /> COMPANY PROFILE
+              </a>
             </div>
           </div>
         </section>

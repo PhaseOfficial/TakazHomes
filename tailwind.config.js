@@ -42,16 +42,16 @@ export default {
         "on-error-container": "#93000a",
         "on-background": "#1a1c1c",
         "on-tertiary-container": "#848484",
-        "secondary-container": "#fed65b",
+        "secondary-container": "#F5A5A5",
         "outline-variant": "#c4c7c7",
-        "secondary-fixed-dim": "#e9c349",
+        "secondary-fixed-dim": "#C91C22",
         "on-primary-container": "#858383",
         "primary-fixed": "#e5e2e1",
         "surface-tint": "#5f5e5e",
         "on-tertiary": "#ffffff",
-        "on-secondary-fixed-variant": "#574500",
+        "on-secondary-fixed-variant": "#6B0D13",
         "primary-fixed-dim": "#c8c6c5",
-        "secondary-fixed": "#ffe088"
+        "secondary-fixed": "#DC3545"
       },
       borderRadius: {
         "DEFAULT": "0.25rem",

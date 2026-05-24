@@ -1,8 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaFacebook, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaTiktok, FaWhatsapp, FaDownload } from "react-icons/fa";
 import logo from "../../assets/Takaz Homes Logo Design.png";
+import companyProfile from "../../assets/Takaz Investments Company Profile 1.pdf";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,8 +51,8 @@ const Header = () => {
             className={({ isActive }) =>
               `text-[16px] font-medium transition-colors duration-300 border-b-2 pb-1 ${
                 isActive
-                  ? "text-orange-600 border-orange-600"
-                  : "text-gray-700 border-transparent hover:text-orange-600"
+                  ? "text-red-600 border-red-600"
+                  : "text-gray-700 border-transparent hover:text-red-600"
               }`
             }
           >
@@ -63,7 +64,7 @@ const Header = () => {
       {/* Desktop CTA */}
       <Link
         to="/contact"
-        className="hidden md:flex bg-orange-600 text-white text-sm font-semibold px-6 py-3 rounded-lg hover:scale-95 transition-transform shadow-md"
+        className="hidden md:flex bg-red-600 text-white text-sm font-semibold px-6 py-3 rounded-lg hover:scale-95 transition-transform shadow-md"
       >
         GET A QUOTE
       </Link>
@@ -102,7 +103,7 @@ const Header = () => {
 
                 <button
                   onClick={toggleMenu}
-                  className="text-black hover:text-orange-600 transition-colors"
+                  className="text-black hover:text-red-600 transition-colors"
                 >
                   <span className="material-symbols-outlined text-3xl">
                     close
@@ -120,8 +121,8 @@ const Header = () => {
                     className={({ isActive }) =>
                       `text-2xl py-4 border-b border-gray-200 w-full text-left flex justify-between items-center transition-colors ${
                         isActive
-                          ? "text-orange-600 font-semibold"
-                          : "text-gray-800 hover:text-orange-600"
+                          ? "text-red-600 font-semibold"
+                          : "text-gray-800 hover:text-red-600"
                       }`
                     }
                   >
@@ -144,7 +145,7 @@ const Header = () => {
                       href={social.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-orange-600 hover:text-white transition-all"
+                      className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-all"
                       title={social.name}
                     >
                       <span className="text-xl">{social.icon}</span>
@@ -153,12 +154,22 @@ const Header = () => {
                 </div>
               </div>
 
+              {/* Company Profile Download */}
+              <a
+                href={companyProfile}
+                download
+                className="flex items-center gap-2 bg-red-100 text-red-700 p-4 rounded-lg hover:bg-red-200 hover:text-red-800 transition-all font-semibold text-sm"
+              >
+                <FaDownload className="text-lg" />
+                Download Company Profile
+              </a>
+
               {/* Sidebar CTA */}
               <div className="mt-auto pt-8 border-t border-gray-200">
                 <Link
                   to="/contact"
                   onClick={toggleMenu}
-                  className="flex items-center gap-4 bg-orange-600 text-white p-5 rounded-2xl shadow-xl text-sm font-bold uppercase text-center justify-center hover:scale-[0.98] transition-transform"
+                  className="flex items-center gap-4 bg-red-600 text-white p-5 rounded-2xl shadow-xl text-sm font-bold uppercase text-center justify-center hover:scale-[0.98] transition-transform"
                 >
                   START YOUR QUOTE
                 </Link>

@@ -119,8 +119,8 @@ const Contact = () => {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300"
               >
-                <div className="w-14 h-14 rounded-xl bg-orange-100 flex items-center justify-center mb-6">
-                  <span className="material-symbols-outlined text-orange-600 text-3xl">
+                <div className="w-14 h-14 rounded-xl bg-red-100 flex items-center justify-center mb-6">
+                  <span className="material-symbols-outlined text-red-600 text-3xl">
                     {info.icon}
                   </span>
                 </div>
@@ -174,7 +174,7 @@ const Contact = () => {
                     value={formData.fullName}
                     onChange={handleChange}
                     placeholder="Full Name"
-                    className="w-full bg-transparent border border-gray-700 rounded-xl px-5 py-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-orange-500"
+                    className="w-full bg-transparent border border-gray-700 rounded-xl px-5 py-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-red-500"
                   />
 
                   <input
@@ -184,7 +184,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Phone Number"
-                    className="w-full bg-transparent border border-gray-700 rounded-xl px-5 py-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-orange-500"
+                    className="w-full bg-transparent border border-gray-700 rounded-xl px-5 py-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-red-500"
                   />
                 </div>
 
@@ -195,14 +195,14 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Email Address"
-                  className="w-full bg-transparent border border-gray-700 rounded-xl px-5 py-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-orange-500"
+                  className="w-full bg-transparent border border-gray-700 rounded-xl px-5 py-4 text-white placeholder:text-gray-500 focus:outline-none focus:border-red-500"
                 />
 
-                <select 
+                <select
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full bg-transparent border border-gray-700 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-orange-500"
+                  className="w-full bg-transparent border border-gray-700 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-red-500"
                 >
                   <option className="text-black" value="Residential Construction">
                     Residential Construction
@@ -225,12 +225,12 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us about your project..."
-                  className="w-full bg-transparent border border-gray-700 rounded-xl px-5 py-4 text-white placeholder:text-gray-500 resize-none focus:outline-none focus:border-orange-500"
+                  className="w-full bg-transparent border border-gray-700 rounded-xl px-5 py-4 text-white placeholder:text-gray-500 resize-none focus:outline-none focus:border-red-500"
                 ></textarea>
 
                 <button
                   type="submit"
-                  className="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-300 flex items-center gap-3"
+                  className="bg-red-600 hover:bg-red-700 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-300 flex items-center gap-3"
                 >
                   SEND VIA WHATSAPP
                   <span className="material-symbols-outlined">send</span>
@@ -252,7 +252,7 @@ const Contact = () => {
               <div className="absolute inset-0 bg-black/40"></div>
 
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 rounded-full bg-orange-600 flex items-center justify-center shadow-2xl animate-pulse">
+                <div className="w-24 h-24 rounded-full bg-red-600 flex items-center justify-center shadow-2xl animate-pulse">
                   <span className="material-symbols-outlined text-white text-5xl">
                     location_on
                   </span>
@@ -274,7 +274,7 @@ const Contact = () => {
                   href="https://maps.google.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-orange-600 font-semibold hover:underline"
+                  className="text-red-600 font-semibold hover:underline"
                 >
                   Open Maps
                 </a>
@@ -308,9 +308,9 @@ const Contact = () => {
                     href={platform.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="px-8 py-4 rounded-full border border-gray-300 hover:border-orange-600 hover:bg-orange-50 transition-all flex items-center gap-3"
+                    className="px-8 py-4 rounded-full border border-gray-300 hover:border-red-600 hover:bg-red-50 transition-all flex items-center gap-3"
                   >
-                    <span className="text-orange-600">
+                    <span className="text-red-600">
                       {platform.icon}
                     </span>
 
@@ -326,7 +326,7 @@ const Contact = () => {
         <section className="px-4 md:px-10 pb-24">
           <motion.div
             {...fadeInUp}
-            className="max-w-7xl mx-auto bg-orange-600 rounded-[40px] p-10 md:p-20 text-center relative overflow-hidden"
+            className="max-w-7xl mx-auto bg-red-600 rounded-[40px] p-10 md:p-20 text-center relative overflow-hidden"
           >
             <div
               className="absolute inset-0 opacity-10"
@@ -342,7 +342,7 @@ const Contact = () => {
                 Ready To Build Your Dream?
               </h2>
 
-              <p className="text-orange-100 text-lg max-w-3xl mx-auto mb-10 leading-relaxed">
+              <p className="text-red-100 text-lg max-w-3xl mx-auto mb-10 leading-relaxed">
                 Partner with Takaz Homes Construction for quality workmanship,
                 modern finishes, and reliable project delivery.
               </p>
@@ -350,12 +350,12 @@ const Contact = () => {
               <div className="flex flex-col sm:flex-row justify-center gap-5">
                 <Link
                   to="/contact"
-                  className="bg-white text-orange-600 px-10 py-4 rounded-xl font-bold hover:scale-95 transition-transform"
+                  className="bg-white text-red-600 px-10 py-4 rounded-xl font-bold hover:scale-95 transition-transform"
                 >
                   GET A QUOTE
                 </Link>
 
-                <button className="border border-white text-white px-10 py-4 rounded-xl font-bold hover:bg-white hover:text-orange-600 transition-all">
+                <button className="border border-white text-white px-10 py-4 rounded-xl font-bold hover:bg-white hover:text-red-600 transition-all">
                   VIEW OUR PROJECTS
                 </button>
               </div>
