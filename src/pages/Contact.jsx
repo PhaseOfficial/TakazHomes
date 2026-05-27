@@ -55,6 +55,12 @@ const Contact = () => {
       whatsapp: true,
     },
     {
+      icon: "mail",
+      title: "Email",
+      details: "talent@takazhomes.co.zw",
+      subDetails: "sales@takazhomes.co.zw | marketing@takazhomes.co.zw",
+    },
+    {
       icon: "schedule",
       title: "Working Hours",
       details: "Mon - Fri: 08:00 - 17:00",
@@ -111,7 +117,7 @@ const Contact = () => {
 
         {/* CONTACT CARDS */}
         <section className="relative z-20 -mt-20 px-4 md:px-10 mb-24">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
               <motion.div
                 key={info.title}
@@ -358,6 +364,17 @@ const Contact = () => {
                 <button className="border border-white text-white px-10 py-4 rounded-xl font-bold hover:bg-white hover:text-red-600 transition-all">
                   VIEW OUR PROJECTS
                 </button>
+              </div>
+            </div>
+          </motion.div>
+        </section>
+      </main>
+    </Layout>
+  );
+};
+
+export default Contact;
+tton>
               </div>
             </div>
           </motion.div>

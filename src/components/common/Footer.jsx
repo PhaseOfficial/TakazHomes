@@ -20,6 +20,11 @@ const Footer = () => {
             <p className="font-body-md text-body-md opacity-70 text-white/80">
               Zimbabwe's premier construction finishing experts. Specializing in high-precision skimming, tiling, and modern architecture.
             </p>
+            <div className="pt-2">
+              <a href="mailto:sales@takazhomes.co.zw" className="text-secondary-fixed hover:underline font-label-md">
+                sales@takazhomes.co.zw
+              </a>
+            </div>
           </div>
           
           <div className="grid grid-cols-2 gap-stack-lg md:grid-cols-3">
