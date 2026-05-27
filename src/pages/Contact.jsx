@@ -374,14 +374,3 @@ const Contact = () => {
 };
 
 export default Contact;
-tton>
-              </div>
-            </div>
-          </motion.div>
-        </section>
-      </main>
-    </Layout>
-  );
-};
-
-export default Contact;
